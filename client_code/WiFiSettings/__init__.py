@@ -10,5 +10,9 @@ class WiFiSettings(WiFiSettingsTemplate):
 
   def saveButton_click(self, **event_args):
     """This method is called when the button is clicked"""
+    wifiSSID = self.wifiDropDown.selected_value
+    wifiPassword = self.passwordBox.text
+    print(wifiSSID)
+    print(wifiPassword)
     pass
 
