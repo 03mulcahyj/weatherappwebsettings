@@ -8,6 +8,8 @@ unique_ids:
   modules: {}
   server_modules:
     ServerModule1: '1703619865691274545403781.848'
+    shutdownCode: TKIWTXUAFNDLAZJ5MWY74WB45Z3GCMQZ
+    wifiCode: ZWNGA2IMQLVWYR2B74ZIHTT7OXESVYAE
   assets:
     standard-page.html: YONCH6A2FC6US32GQQGDGZRZ2I2U7HV3
     theme.css: TZSSI22J327U4EGHHUICNJROJ4GMQ3SL

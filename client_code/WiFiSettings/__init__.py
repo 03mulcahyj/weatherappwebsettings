@@ -24,10 +24,8 @@ class WiFiSettings(WiFiSettingsTemplate):
         alert("Select an SSID")
     else:
         ssidCheck = True
-    if len(wifiPassword) == 0:
-        c = confirm("Password is blank. Confirm to continue")
-        if c is True:
-            passCheck = True
+    if len(wifiPassword) <8:
+        c = confirm("Password is less than 8 characters. Unable to use password")
     else:
         passCheck = True
     wifiDict = dict(ssid=wifiSSID,psk=wifiPassword,key_mgmt='WPA-PSK')
