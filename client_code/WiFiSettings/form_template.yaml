@@ -9,7 +9,25 @@ components:
   layout_properties: {slot: default}
   components:
   - type: DropDown
-    properties: {}
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: WiFi Network
+      border: ''
+      enabled: true
+      foreground: ''
+      items: [test1, test2]
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: true
     name: wifiDropDown
     layout_properties: {grid_position: 'IEKKNC,MFMZOG'}
     data_bindings: []
