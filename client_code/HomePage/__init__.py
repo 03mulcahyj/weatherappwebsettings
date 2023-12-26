@@ -31,5 +31,6 @@ class HomePage(HomePageTemplate):
     """This method is called when the button is clicked"""
     print("Shutdown Button pressed")
     #Call Shutdown Function
+    anvil.server.call("systemShutdown")
     pass
 
