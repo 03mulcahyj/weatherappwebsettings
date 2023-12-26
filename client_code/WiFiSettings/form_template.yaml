@@ -1,0 +1,53 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: DropDown
+    properties: {}
+    name: wifiDropDown
+    layout_properties: {grid_position: 'IEKKNC,MFMZOG'}
+    data_bindings: []
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {grid_position: 'CUDFFQ,EPTGLY'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Password:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: passwordLabel
+    layout_properties: {grid_position: 'YHUZNJ,PBMNDG'}
+  - type: TextBox
+    properties: {}
+    name: passwordBox
+    layout_properties: {grid_position: 'YHUZNJ,KDZMRS'}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_2
+    layout_properties: {grid_position: 'QNCREA,FRDWDP'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Save, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: saveButton
+    layout_properties: {grid_position: 'FMQGOP,SPHRZI'}
+    event_bindings: {click: saveButton_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: WiFi Settings, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_1
+  layout_properties: {slot: title}

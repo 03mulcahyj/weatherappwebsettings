@@ -4,10 +4,9 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
 - type: FlowPanel
   properties: {}
   name: navbar_links
