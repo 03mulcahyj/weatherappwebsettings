@@ -1,5 +1,6 @@
 from ._anvil_designer import SetLocationTemplate
 from anvil import *
+import anvil.server
 
 class SetLocation(SetLocationTemplate):
   def __init__(self, **properties):

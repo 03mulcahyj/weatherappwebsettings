@@ -6,7 +6,8 @@ unique_ids:
     WiFiSettings: '1703600539989868006305688.4813'
     WiFiSettings.RowTemplate1: '1703600626281893213130200.7726'
   modules: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1703619865691274545403781.848'
   assets:
     standard-page.html: YONCH6A2FC6US32GQQGDGZRZ2I2U7HV3
     theme.css: TZSSI22J327U4EGHHUICNJROJ4GMQ3SL

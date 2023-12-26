@@ -1,5 +1,6 @@
 from ._anvil_designer import ThemeSettingsTemplate
 from anvil import *
+import anvil.server
 
 class ThemeSettings(ThemeSettingsTemplate):
   def __init__(self, **properties):

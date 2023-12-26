@@ -17,7 +17,7 @@ components:
       border: ''
       enabled: true
       foreground: ''
-      items: [test1, test2]
+      items: ['']
       visible: true
       font_size: null
       font: ''
