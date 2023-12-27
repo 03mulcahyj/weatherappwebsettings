@@ -52,3 +52,5 @@ def systemUpdate():
     result = update.gitPull()
     if result == "Already up to date.":
         print("[INFO]... System is up to date")
+    if ("changed" in result) or ("insertion" in result):
+        print("[INFO]... GIT was updated. Pi has now been updated")
