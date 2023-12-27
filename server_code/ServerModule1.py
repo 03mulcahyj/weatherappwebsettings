@@ -15,6 +15,7 @@ import anvil.server
 # Custom scripts
 import shutdownCode as shutdown
 import wifiCode as wifi
+import updateCode as update
 
 @anvil.server.callable
 def wifiSearch():
@@ -37,8 +38,17 @@ def wifiUpdate(wifiDictDetails):
 @anvil.server.callable
 def systemShutdown():
     '''
-    Shuts down the system, slave then master
+    Shuts down the system
     '''
     print("[INFO]... Shutting down the system")
     shutdown.shutdown()
 
+@anvil.server.callable
+def systemUpdate():
+    '''
+    Updates the system with the latest code
+    '''
+    print("[INFO]... Checking for system updates")
+    result = update.gitPull()
+    if result == "Already up to date.":
+        print("[INFO]... System is up to date")
