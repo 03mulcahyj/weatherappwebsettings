@@ -11,7 +11,7 @@ import anvil.server
 # def say_hello(name):
 #   print("Hello, " + name + "!")
 #   return 42
-# Adding comment to update git status
+# Updating comment to update git status
 # Custom scripts
 import shutdownCode as shutdown
 import wifiCode as wifi
