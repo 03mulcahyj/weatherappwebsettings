@@ -32,6 +32,7 @@ class WiFiSettings(WiFiSettingsTemplate):
     print(wifiDict)
     if ssidCheck is True and passCheck is True:
         status = anvil.server.call("wifiUpdate",wifiDict)
+    open_form('HomePage')
     pass
 
   def backButton_click(self, **event_args):
