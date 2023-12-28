@@ -38,5 +38,5 @@ class HomePage(HomePageTemplate):
 
   def restartButton_click(self, **event_args):
     """This method is called when the button is clicked"""
-    anvil.server.call("systemShutdown")
+    anvil.server.call("systemRestart")
 
