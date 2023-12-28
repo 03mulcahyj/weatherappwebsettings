@@ -44,6 +44,14 @@ def systemShutdown():
     shutdown.shutdown()
 
 @anvil.server.callable
+def systemRestart():
+    '''
+    Shuts down the system
+    '''
+    print("[INFO]... Restarting the system")
+    shutdown.reboot()
+
+@anvil.server.callable
 def systemUpdate():
     '''
     Updates the system with the latest code
