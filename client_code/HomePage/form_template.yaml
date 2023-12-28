@@ -34,10 +34,10 @@ components:
     layout_properties: {grid_position: 'QJXPMF,NKJUWU'}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Theme Settings, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: colourSettings
+      foreground: '', visible: true, text: Settings, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: settings
     layout_properties: {grid_position: 'DDIUIK,NDCTHW'}
     event_bindings: {click: colourSettings_click}
   - type: Spacer
