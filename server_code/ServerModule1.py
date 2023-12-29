@@ -1,6 +1,8 @@
+print("[INFO]... Importing standard modules")
 import anvil.server
-
+print("[INFO]... All standard modules imported")
 # Custom scripts
+# All of these are run by the process when it runs the server module
 import shutdownCode as shutdown
 import wifiCode as wifi
 import updateCode as update

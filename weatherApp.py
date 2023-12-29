@@ -35,7 +35,7 @@ internetIndicator = "green"
 displayRes = "320x240" # WxH
 timeList = [None] * 2
 seconds_in_day = 24*60*60
-dirPath = "/home/pi/weatherappwebsettings/server_code/"
+dirPath = "/home/pi/weatherappwebsettings/"
 #Get API key from file
 with open("/home/pi/apiText.txt") as file:
     apiKey = file.readline()
