@@ -1,5 +1,11 @@
 import anvil.server
 
+# Custom scripts
+import shutdownCode as shutdown
+import wifiCode as wifi
+import updateCode as update
+print("[INFO]... All custom modules imported")
+
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
@@ -12,16 +18,10 @@ import anvil.server
 #   print("Hello, " + name + "!")
 #   return 42
 #
-# Custom scripts
-import shutdownCode as shutdown
-import wifiCode as wifi
-import updateCode as update
 
 @anvil.server.callable
 def wifiSearch():
-    '''
-    Finds all available wifi networks
-    '''
+    ''' Finds all available wifi networks'''
     print("[INFO]... Checking for broadcasting wifi networks")
     wifiList = wifi.wifi_search()
     print(wifiList)
@@ -31,31 +31,25 @@ def wifiSearch():
 @anvil.server.callable
 def wifiUpdate(wifiDictDetails):
     ''' Takes in the wifi details in dictionary form to update them on the system'''
-    print("Updating WiFi settings")
+    print("[INFO] Updating WiFi settings")
     wifi.command_add_wifi(wifiDictDetails)
     return True
 
 @anvil.server.callable
 def systemShutdown():
-    '''
-    Shuts down the system
-    '''
+    ''' Shuts down the system '''
     print("[INFO]... Shutting down the system")
     shutdown.shutdown()
 
 @anvil.server.callable
 def systemRestart():
-    '''
-    Shuts down the system
-    '''
+    ''' Restarts down the system '''
     print("[INFO]... Restarting the system")
     shutdown.reboot()
 
 @anvil.server.callable
 def systemUpdate():
-    '''
-    Updates the system with the latest code
-    '''
+    ''' Updates the system with the latest code'''
     print("[INFO]... Checking for system updates")
     result = update.gitPull()
     if result == "Already up to date.":

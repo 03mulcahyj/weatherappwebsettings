@@ -11,7 +11,7 @@ import sys
 
 # Define general variables
 wifiConf = "/etc/wpa_supplicant/wpa_supplicant.conf"
-wifiUpdate = "wifi_update.csv"
+wifiUpdateFile = "wifi_update.csv"
 dirPath = "/home/pi/weatherApp/"
 wifiRaw = []
 wifiList = []
@@ -26,7 +26,7 @@ def wifi_search():
     # Finds just SSIDs from the available networks
     wifiFile = open(dirPath+"wifiRaw.txt", "r")
     wifiNetworks = open(dirPath+"wifiNetworkList.txt", "w+")
-    wifiNetworks.writelines(["List of Nearby WiFi Networks \n"])
+    wifiNetworks.writelines(["[INFO]... List of Nearby WiFi Networks \n"])
     name = "ESSID"
     while True:
         line = wifiFile.readline()
@@ -46,7 +46,7 @@ def wifi_search():
     return wifiList
 
 def command_add_wifi(json):
-    print("-> Checking wifi")
+    print("[INFO]... Checking wifi")
     # Read file WPA suppliant
     networks = []
     with open("/etc/wpa_supplicant/wpa_supplicant.conf", "r") as f:
@@ -92,15 +92,4 @@ def command_add_wifi(json):
     with open('/etc/wpa_supplicant/wpa_supplicant.conf', 'w') as f:
         for line in cleanLines:
             f.write(line)
-    print("-> Wifi Updated!")
-
-def wifiUpdate():
-    with open(dirPath+wifiUpdate, 'r') as file:
-        csv_reader = csv.DictReader(file)
-        data = [row for row in csv_reader]
-    for i in data:
-        print("[INFO]... Checking network:",i['ssid'])
-        command_add_wifi(i)
-
-if __name__ == '__main__':
-    globals()[sys.argv[1]]()
+    print("[INFO]... Wifi Updated!")

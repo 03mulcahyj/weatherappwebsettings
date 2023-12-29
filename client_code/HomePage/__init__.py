@@ -9,8 +9,7 @@ class HomePage(HomePageTemplate):
 
     # Any code you write here will run before the form opens.
     appDetails = anvil.server.get_app_origin()
-    print(type(appDetails))
-    print(appDetails)
+    print("[INFO]... App URL: "+appDetails)
 
   def wifiSettings_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -26,8 +25,8 @@ class HomePage(HomePageTemplate):
 
   def colourSettings_click(self, **event_args):
     """This method is called when the button is clicked"""
-    print("Colour Settings Button pressed")
-    open_form('ThemeSettings')
+    print("Settings Button pressed")
+    open_form('Settings')
     pass
 
   def shutdown_click(self, **event_args):
@@ -35,8 +34,11 @@ class HomePage(HomePageTemplate):
     print("Shutdown Button pressed")
     #Call Shutdown Function
     anvil.server.call("systemShutdown")
+    pass
 
   def restartButton_click(self, **event_args):
     """This method is called when the button is clicked"""
+    print("Reset Button pressed")
     anvil.server.call("systemRestart")
+    pass
 
