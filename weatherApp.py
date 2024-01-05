@@ -12,13 +12,10 @@ API setup from: https://www.tomorrow.io/blog/creating-a-gui-weather-widget-for-r
 
 from tkinter import *
 import tkinter as tk
-from geopy.geocoders import Nominatim
 from tkinter import ttk,messagebox
-from timezonefinder import TimezoneFinder
 from datetime import datetime as dt
 from string import Template
 import requests
-import pytz
 import json
 import argparse
 import subprocess
@@ -39,6 +36,8 @@ dirPath = "/home/pi/weatherappwebsettings/"
 #Get API key from file
 with open("/home/pi/apiText.txt") as file:
     apiKey = file.readline()
+    if "\n" in apiKey:
+        apiKey = apiKey[:-1]
 weatherCodeDict = {
     0: ["Unknown",dirPath+"images/weather-forecast-sign-16552.png"],
     1000: ["Clear, Sunny",dirPath+"images/yellow-sun-16526.png"],
@@ -110,7 +109,8 @@ def get_weather_data(lat,lon,apiKey):
             data = json.load(json_file)
             return data
     try:
-        r = requests.get(url = URL.substitute(lat=lat,lon=lon,apiKey=apiKey)) 
+        r = requests.get(url = URL.substitute(lat=lat,lon=lon,apiKey=apiKey))
+        print(r)
         onlineStatus = True
         internetIndicator = "green"
         data = r.json()
