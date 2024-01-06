@@ -25,3 +25,9 @@ class Settings(SettingsTemplate):
     else:
         alert("Software is up to date.")
     pass
+
+  def themeButton_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('ThemeSettings')
+    print("[INFO]... Opening Theme Settings")
+    pass

@@ -16,6 +16,18 @@ components:
     name: softwareUpdate
     layout_properties: {grid_position: 'FVAVVA,DQTXTM'}
     event_bindings: {click: softwareUpdate_click}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {grid_position: 'CWMNOV,KVAIEZ'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Theme Settings, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: themeButton
+    layout_properties: {grid_position: 'YVYGYU,KJAQMN'}
+    event_bindings: {click: themeButton_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
