@@ -1,8 +1,0 @@
-properties:
-- {name: align, type: string, default_value: '', important: true, default_binding_prop: true}
-is_package: true
-events:
-- {name: change, default_event: true}
-custom_component: true
-components: []
-container: {type: ColumnPanel}

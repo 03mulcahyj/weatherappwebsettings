@@ -3,31 +3,15 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - type: form:ColourPicker
-    properties: {}
-    name: colour_picker_1
-    layout_properties: {grid_position: 'AYOMHQ,GDNVLU'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Testing Text, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'YOEWXP,RPCEKO'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Theme Settings, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
+    text: '       Theme Settings', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
   name: themeLabel
   layout_properties: {slot: title}
 - type: Button
@@ -38,3 +22,37 @@ components:
   name: backButton
   layout_properties: {slot: top-left-btn}
   event_bindings: {click: backButton_click}
+- type: GridPanel
+  properties: {}
+  name: grid_panel_1
+  layout_properties: {slot: default}
+  components:
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#ff0000',
+      bold: false, underline: false, icon: ''}
+    name: buttonRed
+    layout_properties: {row: NJQXEH, width_xs: 2, col_xs: 0, width: 146.933}
+    event_bindings: {click: buttonRed_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#0000ff',
+      bold: false, underline: false, icon: ''}
+    name: button_2
+    layout_properties: {row: NJQXEH, width_xs: 2, col_xs: 3, width: 146.933}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: blue, enabled: true,
+      foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#000000',
+      bold: false, underline: false, icon: ''}
+    name: button_3
+    layout_properties: {row: NJQXEH, width_xs: 2, col_xs: 7, width: 146.933}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#808080',
+      bold: false, underline: false, icon: ''}
+    name: button_4
+    layout_properties: {row: NJQXEH, width_xs: 2, col_xs: 10, width: 146.933}
