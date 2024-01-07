@@ -12,7 +12,7 @@ import sys
 # Define general variables
 wifiConf = "/etc/wpa_supplicant/wpa_supplicant.conf"
 wifiUpdateFile = "wifi_update.csv"
-dirPath = "/home/pi/weatherApp/"
+dirPath = "/home/pi/weatherappwebsettings/"
 wifiRaw = []
 wifiList = []
 
@@ -49,7 +49,7 @@ def command_add_wifi(json):
     print("[INFO]... Checking wifi")
     # Read file WPA suppliant
     networks = []
-    with open("/etc/wpa_supplicant/wpa_supplicant.conf", "r") as f:
+    with open(wifiConf, "r") as f:
         inLines = f.readlines()
     # Discover existing networks
     outLines = []
@@ -89,7 +89,7 @@ def command_add_wifi(json):
         outLines.append("}\n")
     cleanLines = [i for i in outLines if i != '\n']
     # Write to WPA Supplicant
-    with open('/etc/wpa_supplicant/wpa_supplicant.conf', 'w') as f:
+    with open(wifiConf, 'w') as f:
         for line in cleanLines:
             f.write(line)
     print("[INFO]... Wifi Updated!")
