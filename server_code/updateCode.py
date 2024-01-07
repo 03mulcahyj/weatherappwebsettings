@@ -1,4 +1,5 @@
 import subprocess
+import os
 
 def gitPull():
     print("[INFO]... Updating git software")
