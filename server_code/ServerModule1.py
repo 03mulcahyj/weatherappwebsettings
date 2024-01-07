@@ -60,6 +60,9 @@ def systemUpdate():
     if ("changed" in result) or ("insertion" in result):
         print("[INFO]... GIT was updated. Pi has now been updated")
         return True
+    if "fatal" in result:
+        print("[INFO]... GIT encountered an error")
+        return False
 
 @anvil.server.callable
 def themeUpdate(colour,themeSection):
