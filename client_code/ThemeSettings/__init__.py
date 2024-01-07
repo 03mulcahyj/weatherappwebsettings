@@ -21,4 +21,22 @@ class ThemeSettings(ThemeSettingsTemplate):
     print("[INFO]... Button colour is"+str(colour))
     pass
 
+  def buttonBlue_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    colour = self.buttonBlue.background
+    print("[INFO]... Button colour is"+str(colour))
+    pass
+
+  def buttonBlack_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    colour = self.buttonBlack.background
+    print("[INFO]... Button colour is"+str(colour))
+    pass
+
+  def buttonGrey_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    colour = self.buttonGrey.background
+    print("[INFO]... Button colour is"+str(colour))
+    pass
+
 

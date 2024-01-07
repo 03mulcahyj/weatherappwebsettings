@@ -40,19 +40,22 @@ components:
       foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '#0000ff',
       bold: false, underline: false, icon: ''}
-    name: button_2
+    name: buttonBlue
     layout_properties: {row: NJQXEH, width_xs: 2, col_xs: 3, width: 146.933}
+    event_bindings: {click: buttonBlue_click}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: blue, enabled: true,
       foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '#000000',
       bold: false, underline: false, icon: ''}
-    name: button_3
+    name: buttonBlack
     layout_properties: {row: NJQXEH, width_xs: 2, col_xs: 7, width: 146.933}
+    event_bindings: {click: buttonBlack_click}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '#808080',
       bold: false, underline: false, icon: ''}
-    name: button_4
+    name: buttonGrey
     layout_properties: {row: NJQXEH, width_xs: 2, col_xs: 10, width: 146.933}
+    event_bindings: {click: buttonGrey_click}

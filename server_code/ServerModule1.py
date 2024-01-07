@@ -60,3 +60,9 @@ def systemUpdate():
     if ("changed" in result) or ("insertion" in result):
         print("[INFO]... GIT was updated. Pi has now been updated")
         return True
+
+@anvil.server.callable
+def themeUpdate(colour,themeSection):
+    ''' Updates the theme of the weatherApp Ie Text & Background colour'''
+    print("[INFO]... Updating the Theme Settings file")
+    
