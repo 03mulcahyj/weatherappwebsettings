@@ -13,32 +13,32 @@ class HomePage(HomePageTemplate):
 
   def wifiSettings_click(self, **event_args):
     """This method is called when the button is clicked"""
-    print("Wifi Button pressed")
+    print("[INFO]... Wifi Button pressed")
     open_form('WiFiSettings')
     pass
 
   def setLocation_click(self, **event_args):
     """This method is called when the button is clicked"""
-    print("Set Location Button pressed")
+    print("[INFO]... Set Location Button pressed")
     open_form('SetLocation')
     pass
 
   def colourSettings_click(self, **event_args):
     """This method is called when the button is clicked"""
-    print("Settings Button pressed")
+    print("[INFO]... Settings Button pressed")
     open_form('Settings')
     pass
 
   def shutdown_click(self, **event_args):
     """This method is called when the button is clicked"""
-    print("Shutdown Button pressed")
+    print("[INFO]... Shutdown Button pressed")
     #Call Shutdown Function
     anvil.server.call("systemShutdown")
     pass
 
   def restartButton_click(self, **event_args):
     """This method is called when the button is clicked"""
-    print("Reset Button pressed")
+    print("[INFO]... Reset Button pressed")
     anvil.server.call("systemRestart")
     pass
 
