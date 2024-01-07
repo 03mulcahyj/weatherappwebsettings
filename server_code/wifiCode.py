@@ -11,7 +11,6 @@ import sys
 
 # Define general variables
 wifiConf = "/etc/wpa_supplicant/wpa_supplicant.conf"
-wifiUpdateFile = "wifi_update.csv"
 dirPath = "/home/pi/weatherappwebsettings/"
 wifiRaw = []
 wifiList = []
