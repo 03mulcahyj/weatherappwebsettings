@@ -23,7 +23,7 @@ components:
   layout_properties: {slot: top-left-btn}
   event_bindings: {click: backButton_click}
 - type: GridPanel
-  properties: {}
+  properties: {spacing_above: large}
   name: grid_panel_1
   layout_properties: {slot: default}
   components:
