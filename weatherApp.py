@@ -21,10 +21,11 @@ import argparse
 import subprocess
 import os
 import time
+import csv
 
 # Set Variables
-backgroundColour = "cadetblue1"
-textColour = "black"
+#backgroundColour = "cadetblue1"
+#textColour = "black"
 testMode = False
 internetText = ''
 onlineStatus = True
@@ -33,7 +34,15 @@ displayRes = "320x240" # WxH
 timeList = [None] * 2
 seconds_in_day = 24*60*60
 dirPath = "/home/pi/weatherappwebsettings/"
-#Get API key from file
+# Get colour variables from file
+with open("/home/pi/weatherappwebsettings/config_files/colourFile.csv") as file:
+    # The file will have one row by default, and a second in the event the user updates the settings
+    csv_reader = csv.DictReader(file)
+    colourData = [row for row in csv_reader][-1]
+    print(colourData)
+backgroundColour = colourData["backgroundColour"]
+textColour = colourData["textColour"]
+# Get API key from file
 with open("/home/pi/apiText.txt") as file:
     apiKey = file.readline()
     if "\n" in apiKey:
